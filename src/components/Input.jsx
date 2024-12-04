@@ -9,10 +9,10 @@ export const Input = () => {
             <h1>Full Name Display</h1>
             <form onSubmit={(e) => {e.preventDefault(); fname && lname && setSubmitted(true);}}>
                 <label htmlFor="fn">First Name:</label>
-                <input type="text" id="fn" required onChange={(e) => setFname(e.target.value)} />
+                <input type="text" id="fn" value={fname} required onChange={(e) => setFname(e.target.value)} />
                 <br />
                 <label htmlFor="ln">Last Name:</label>
-                <input type="text" id="ln" required onChange={(e) => setLname(e.target.value)}/>
+                <input type="text" id="ln" value={lname} required onChange={(e) => setLname(e.target.value)}/>
                 <br />
                 <button type='submit'>Submit</button>
             </form>
