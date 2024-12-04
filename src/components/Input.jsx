@@ -16,7 +16,7 @@ export const Input = () => {
                 <br />
                 <button type='submit'>Submit</button>
             </form>
-            {isSubmitted && `Full Name: ${fname} ${lname}`}
+            {isSubmitted && <p>Full Name: {fname} {lname}</p>}
         </div>
     )
 }
