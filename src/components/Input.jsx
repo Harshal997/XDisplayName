@@ -7,7 +7,7 @@ export const Input = () => {
     return (
         <div>
             <h1>Full Name Display</h1>
-            <form onSubmit={(e) => {e.preventDefault(); fname && lname && setSubmitted(true);}}>
+            <form onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}}>
                 <label htmlFor="fn">First Name:</label>
                 <input type="text" id="fn" value={fname} required onChange={(e) => setFname(e.target.value)} />
                 <br />
@@ -16,7 +16,7 @@ export const Input = () => {
                 <br />
                 <button type='submit'>Submit</button>
             </form>
-            {isSubmitted && fname && lname && `Full Name: ${fname} ${lname}`}
+            {isSubmitted && `Full Name: ${fname} ${lname}`}
         </div>
     )
 }
